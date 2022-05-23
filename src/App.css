@@ -1,38 +1,144 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* header */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@keyframes inOut {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+header {
+  height: 100vh;
+  background-image: linear-gradient(270deg,#ebebeb,rgba(153, 160, 255, 0.582));
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.header-container {
+  width: 30%;
+  animation: 1s ease 0s 1 slideInFromLeft;
+}
+
+.header-container h1 {
+  font-size: 40px;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+
+.img-container {
+  animation: 1s ease 0s 1 inOut;
+}
+
+
+.header-illustration {
+  width: 350px;
+}
+
+/* main */
+
+.solar-system {
+  background-color: rgb(18, 18, 18);
+  height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.solar-system h2 {
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.planets-container {
+  display: flex;
+}
+
+.planet-card {
+  margin-top: 60px;
+  width: 150px;
+  text-align: center;
+  transition: all 400ms ease;
+}
+
+.planet-card:hover {
+  transform: scale(1.3);
+}
+
+.planet-card img {
+  width: 125px;
+}
+
+.missions {
+  background-image: linear-gradient(270deg,#ebebeb,rgba(153, 160, 255, 0.582));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.missions h2 {
+  margin: 50px 0;
+  width: fit-content;
+  border: 1px solid black;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.missions-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
+}
+
+.mission-card {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.7);
+  margin: 10px;
+  width: 175px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  transition: all 500ms ease;
+  padding: 10px;
+}
+
+.mission-card:hover {
+  transform: scale(1.05);
+}
+
+.mission-card p:nth-child(1) {
+  margin-bottom: 20px;
+  font-weight: 500;
 }
