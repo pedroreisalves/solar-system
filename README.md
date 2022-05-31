@@ -1,6 +1,6 @@
 <h1>Project Solar System</h1>
 
-> Status: Developing ⚠️
+> Status: Finished ✅
 
 ## About Project
 
